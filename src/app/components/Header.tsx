@@ -1,5 +1,5 @@
 import styles from '../styles/Header.module.css';
-import { FaUtensils, FaPhoneAlt } from "react-icons/fa";
+import { FaUtensils } from "react-icons/fa";
 
 const Header = () => {
   return (
