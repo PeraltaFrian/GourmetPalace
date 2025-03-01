@@ -1,0 +1,71 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    min-height: 100vh; 
+    padding-top: 80px; 
+    padding-bottom: 80px; 
+  }
+  
+  .dropdownContainer {
+    display: flex;
+    justify-content: center;  
+    margin-bottom: 20px;
+  }
+  
+  .dropdown {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    width: 100%;
+    max-width: 250px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .dropdown:focus {
+    outline: none;
+    border-color: #ff7f50; 
+  }
+  
+  .dropdown option {
+    background-color: white;
+  }
+  
+  .dishListContainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    flex-grow: 1; 
+  }
+  
+  .dishList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 100px; 
+    width: 100%; 
+    max-width: 1200px; 
+  }
+  
+  @media (max-width: 1200px) {
+    .dishList {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dishList {
+      grid-template-columns: 1fr;
+    }
+  }
+  
