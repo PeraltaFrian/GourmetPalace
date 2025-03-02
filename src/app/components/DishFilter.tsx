@@ -3,7 +3,8 @@ import { useState } from "react";
 import dishListStyles from '../styles/dishList.module.css'; 
 import dishItemStyles from '../styles/dishItem.module.css'; 
 import buttonStyles from '../styles/button.module.css'; 
-import styles from '../styles/DishFilter.module.css'; 
+import styles from '../styles/DishFilter.module.css';
+import Image from 'next/image'; 
 
 interface DishFilterProps {
   initialItems: any[]; 
@@ -48,11 +49,11 @@ const DishFilter: React.FC<DishFilterProps> = ({ initialItems }) => {
           {filteredItems.map((item: any) => (
             <article key={item.sys.id} className={dishItemStyles.dishItem}>
               {item.fields.dishImage && (
-                <img
+                <Image
                   src={`https:${item.fields.dishImage.fields.file.url}`} 
-                  alt={item.fields.dishName}
-                  width={500}
-                  height={300}
+                  alt={item.fields.dishImage.fields.title || "Image of dish"} 
+                  width={400} 
+                  height={300} 
                 />
               )}
               <h2>{item.fields.dishName}</h2>
