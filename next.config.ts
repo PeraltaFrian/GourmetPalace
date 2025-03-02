@@ -1,8 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export', 
   images: {
-    domains: ['images.ctfassets.net'], // Allow loading images from this domain
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        pathname: '/**',  
+      },
+    ],
   },
 };
 
